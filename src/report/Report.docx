@@ -1,0 +1,12 @@
+# of Orders	    Single- thread (msec)	Multi-thread (msec)
+2	             41	                    43
+50	             216	                202
+100          	282	                    239
+
+According to my results, I found out that when the number of orders gets higher,
+the multi threading time gets lower than the single threading time. When I only 
+used two orders, the single thread time was faster than multi, but as I 
+increased the number of orders, multi thread was faster. This makes sense 
+because multi threads can the order processing for different customers
+happen at the same time. Threads also require fewer resources and generate less
+overall. 
